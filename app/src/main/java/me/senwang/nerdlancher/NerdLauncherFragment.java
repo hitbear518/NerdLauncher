@@ -66,6 +66,7 @@ public class NerdLauncherFragment extends ListFragment {
 		if (activityInfo == null) return;
 		Intent intent = new Intent(Intent.ACTION_MAIN);
 		intent.setClassName(activityInfo.packageName, activityInfo.name);
+		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		startActivity(intent);
 	}
 }
